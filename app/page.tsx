@@ -29,18 +29,16 @@ export default function Home() {
     <>
     <div id="impress">
       <div
-        className="step"
-        data-x="0"
-        data-y="0"
+        id="bored"
+        className="step slide"
+        data-x="-1000"
+        data-y="-1500"
         style={{
           backgroundImage: "url('/1-background.png')",
           backgroundSize: "cover",
-          width: "100vw",
-          height: "100vh",
+          backgroundPosition: "center",
         }}
       >
-        <h1>Slide 1</h1>
-        <p>Regular slide with background image.</p>
       </div>
       <div
         className="step"
