@@ -33,23 +33,28 @@ export default function Home() {
         className="step slide"
         data-x="-1000"
         data-y="-1500"
-        style={{
-          backgroundImage: "url('/1-background.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+        style={{ width: "1200px" }}
       >
+        <img
+          src="/1-background.png"
+          alt="Slide 1"
+          style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+        />
       </div>
       <div
-        className="step"
-        data-x="0"
-        data-y="-1000"
-        data-scale="0.5"
-        style={{ width: "100vw", height: "100vh" }}
+        id="slide-2"
+        className="step slide"
+        data-x="-1000"
+        data-y="-1500"
+        style={{ width: "1200px" }}
       >
-        <h1>Slide 2</h1>
-        <p>Zoom out effect slide. Then you should try impress.js*</p>
-    </div>
+        <img
+          src="/2-background.png"
+          alt="Slide 1"
+          style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+        />
+      </div>
+    
     <Script src="https:/s/cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js" onLoad={() => window.impress().init()} />
     </div>
     </>

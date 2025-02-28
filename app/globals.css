@@ -44,7 +44,7 @@ body {
 
 .slide {
     display: block;
-    width: 900px;
+    min-width: 900px;
     height: 700px;
     padding: 40px 60px;
     background-color: white;
