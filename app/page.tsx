@@ -68,6 +68,25 @@ export default function Home() {
         </p>
       </div>
 
+      {/* Three Pillars of Fasting Slide */}
+      <div 
+        className="step content-slide" 
+        data-x="2500" 
+        data-y="1500" 
+        data-z="-2000" 
+        data-scale="1.5" 
+        data-rotate-x="-45"
+        data-rotate-y="45"
+        data-rotate-z="-10">
+        <h2>The Three Pillars of Fasting</h2>
+        <ul className="celebration-list">
+          <li><b>First Pillar:</b> Abstaining from food, drink from dawn to sunset</li>
+          <li><b>Second Pillar:</b> Avoiding actions that invalidate the fast</li>
+          <li><b>Third Pillar:</b> Making the intention (Niyyah) to fast before Fajr</li>
+          <p className="note">*According to Maaliki and Shafi'i schools of thought</p>
+        </ul>
+      </div>
+
       {/* Taraweeh and Witr Prayer Slide */}
       <div 
         className="step content-slide" 
