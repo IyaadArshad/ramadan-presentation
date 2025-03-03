@@ -49,19 +49,18 @@ export default function Home() {
           data-x="500"
           data-y="-1500"
         >
-        <img
-          src="/2-background.png"
-          alt="Slide 2"
-          style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+          <img
+            src="/2-background.png"
+            alt="Slide 2"
+            style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+          />
+        </div>
+
+        <Script
+          src="https:/s/cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"
+          onLoad={() => window.impress().init()}
         />
       </div>
-
-      <Script
-        src="https:/s/cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"
-        onLoad={() => window.impress().init()}
-      />
-
-    </div>
     </>
   );
 }
