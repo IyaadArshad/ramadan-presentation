@@ -1,173 +1,68 @@
 @import "tailwindcss";
 
-/* CSS Reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-/* Basic styling */
-body {
-    font-family: 'PT Sans', sans-serif;
-    min-height: 740px;
-    background: rgb(215, 215, 215);
-    background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-}
-
-/* Impress.js specific styles */
-.step {
-    position: relative;
-    width: 900px;
-    padding: 40px;
-    margin: 20px auto;
-    box-sizing: border-box;
-    font-family: 'PT Serif', georgia, serif;
-    font-size: 48px;
-    line-height: 1.5;
-    opacity: 0.1;
-    transition: all 1s cubic-bezier(0.4, 0.1, 0.2, 1);
-}
-
-.step img {
-    transition: all 0.5s ease-in-out;
-}
-
-.step:hover img {
-    transform: scale(1.02);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-}
-
-.impress-enabled .step {
-    margin: 0;
-    opacity: 0.2;
-    transition: opacity 1s, transform 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.impress-enabled .step.active {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-/* Remove standard slide styles */
-.slide {
-    all: unset;
-    display: block;
-}
-
-/* Add perspective to the entire presentation */
-#impress {
-    perspective: 3000px;
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Add smooth transition for transform properties */
+/* Reset basic styling for consistency */
 * {
-    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  transition:transform 1s cubic-bezier(0.6,0.05,0.35,1), opacity 0.8s ease;
 }
 
-/* Slide content styling */
-.slide q {
-    display: block;
-    font-size: 50px;
-    line-height: 72px;
-    margin-top: 100px;
+/* General body style */
+body {
+  background: radial-gradient(circle, #F4EFE6, #C9B39F);
+  color: #3C2A21;
+  font-family: 'Geist', sans-serif;
 }
 
-.slide q strong {
-    white-space: nowrap;
+/* impress.js basics with depth perspective */
+#impress {
+  perspective: 5000px;
+  transform-style: preserve-3d;
 }
 
-/* Active slide styles */
-.impress-enabled .step {
-    margin: 0;
-    opacity: 0.3;
-    transition: opacity 1s;
+/* Slide base styling */
+.step {
+  position: relative;
+  opacity:0.3;
+  transform: translateZ(0);
+  background: rgba(255,255,255,0.8);
+  border-radius:20px;
+  padding: 60px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  width:800px;
 }
 
+/* Content slide text style */
+.content-slide h2 {
+  font-size:50px;
+  margin-bottom:25px;
+  font-weight:bold;
+  color:#7D503B;
+  text-shadow: 1px 1px #EEE;
+}
+.content-slide p, .content-slide ul {
+  font-size:25px;
+  line-height:1.6;
+  margin-top:10px;
+  font-family:'Geist_Mono', monospace;
+}
+
+.content-slide ul {
+  list-style-type:disc;
+  padding-left:20px;
+}
+
+/* Active slide effect */
 .impress-enabled .step.active {
-    opacity: 1;
+  opacity:1;
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* Hover interactivity */
+.step:hover {
+  transform:scale(1.04);
+  opacity:0.95;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
