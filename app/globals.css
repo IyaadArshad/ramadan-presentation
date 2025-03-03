@@ -108,23 +108,45 @@ body {
     font-family: 'PT Serif', georgia, serif;
     font-size: 48px;
     line-height: 1.5;
+    opacity: 0.1;
+    transition: all 1s cubic-bezier(0.4, 0.1, 0.2, 1);
 }
 
+.step img {
+    transition: all 0.5s ease-in-out;
+}
+
+.step:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.2;
+    transition: opacity 1s, transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.impress-enabled .step.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Remove standard slide styles */
 .slide {
+    all: unset;
     display: block;
-    min-width: 900px;
-    height: 700px;
-    padding: 40px 60px;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, .3);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-    color: rgb(102, 102, 102);
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 30px;
-    line-height: 36px;
-    letter-spacing: -1px;
+}
+
+/* Add perspective to the entire presentation */
+#impress {
+    perspective: 3000px;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add smooth transition for transform properties */
+* {
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Slide content styling */
