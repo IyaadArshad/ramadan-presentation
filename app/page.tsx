@@ -30,32 +30,83 @@ export default function Home() {
     <>
       <div id="impress">
         <div
-          id="bored"
+          id="slide1"
           className="step slide"
           data-x="-1000"
           data-y="-1500"
           style={{ width: "1200px" }}
         >
           <img
-            src="/1-background.png"
+            src="/slide01.png"
             alt="Slide 1"
             style={{ width: "100%", height: "100%", borderRadius: "12px" }}
           />
         </div>
         <div
+          id="slide2"
           className="step slide"
-          style={{ width: "1200px" }}
-          id="slide-2"
           data-x="500"
           data-y="-1500"
+          style={{ width: "1200px" }}
         >
           <img
-            src="/2-background.png"
+            src="/slide02.png"
             alt="Slide 2"
             style={{ width: "100%", height: "100%", borderRadius: "12px" }}
           />
         </div>
-
+        <div
+          id="slide3"
+          className="step slide"
+          data-x="-1000"
+          data-y="0"
+          style={{ width: "1200px" }}
+        >
+          <img
+            src="/slide03.png"
+            alt="Slide 3"
+            style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+          />
+        </div>
+        <div
+          id="slide4"
+          className="step slide"
+          data-x="500"
+          data-y="0"
+          style={{ width: "1200px" }}
+        >
+          <img
+            src="/slide04.png"
+            alt="Slide 4"
+            style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+          />
+        </div>
+        <div
+          id="slide5"
+          className="step slide"
+          data-x="-1000"
+          data-y="1500"
+          style={{ width: "1200px" }}
+        >
+          <img
+            src="/slide05.png"
+            alt="Slide 5"
+            style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+          />
+        </div>
+        <div
+          id="slide6"
+          className="step slide"
+          data-x="500"
+          data-y="1500"
+          style={{ width: "1200px" }}
+        >
+          <img
+            src="/slide06.png"
+            alt="Slide 6"
+            style={{ width: "100%", height: "100%", borderRadius: "12px" }}
+          />
+        </div>
         <Script
           src="https:/s/cdnjs.cloudflare.com/ajax/libs/impress.js/0.5.3/impress.min.js"
           onLoad={() => window.impress().init()}
